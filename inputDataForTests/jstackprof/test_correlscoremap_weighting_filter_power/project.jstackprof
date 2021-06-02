@@ -1,0 +1,366 @@
+{
+    "_descAbout_routePoint": "Points coordinates are [x, y] in pixel image coordinates. The top-let corner of top-left image pixel is [0.0, 0.0]. idPoint increases by 1 from first point to last point",
+    "_noteAbout_imagesSet_geoRefInfos": "The image path and filename stored in imagesSet_geoRefInfos is not used at loading",
+    "bUseGeoRef": false,
+    "computationMainMode": 1,
+    "computationParameters": {
+        "baseComputationMethod": "median",
+        "correlationScoreMapParameters": {
+            "PX1_PX2": {
+                "bUse": true,
+                "option_thresholdRejection": {
+                    "bUse": true,
+                    "rejectValueIfBelow": 85
+                },
+                "option_weighting": {
+                    "bUse": false,
+                    "weightExponent": 2
+                }
+            },
+            "ZOther": {
+                "bUse": true,
+                "option_thresholdRejection": {
+                    "bUse": false,
+                    "rejectValueIfBelow": 256
+                },
+                "option_weighting": {
+                    "bUse": true,
+                    "weightExponent": 6
+                }
+            }
+        },
+        "pixelExtractionMethod": "nearestPixel",
+        "profilOrientation": "progressDirectionAlongTraceIsFromLastToFirstPoint"
+    },
+    "contentType": "project",
+    "imagesSet_geoRefInfos": {
+        "coordRefSys_coordTrans": {
+            "EPSG_code": "EPSG:notSet"
+        },
+        "imageGeoRef": {
+            "pathAndFilename": {
+                "absolutePath": "/home/laurent/06mai2021_forMoreTest/triangle_binary_gradient/corelscore_test/readyAsInputTest",
+                "filename": "readyasinput_2000x2000_white.tif"
+            },
+            "worldFileContent": {
+                "0_A_xScale": 1,
+                "1_D_rotationTerms_1": 0,
+                "2_B_rotationTerms_2": 0,
+                "3_E_yScale": -1,
+                "4_C_xTranslationTerm": 0,
+                "5_F_yTranslationTerm": 0
+            }
+        }
+    },
+    "inputFiles": {
+        "inputCorrelationScoreMaps": {
+            "PX1_PX2": {
+                "attributes": {
+                    "basetype": 2,
+                    "fileSize": 1000382,
+                    "height": 1000,
+                    "nchannels": 1,
+                    "width": 1000
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_correlScoreWeightPower/readyAsAppInput/correlmaps_byte",
+                    "filename": "readyasinput_correlmap2_byte.tif"
+                }
+            },
+            "ZOther": {
+                "attributes": {
+                    "basetype": 2,
+                    "fileSize": 1000382,
+                    "height": 1000,
+                    "nchannels": 1,
+                    "width": 1000
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_correlScoreWeightPower/readyAsAppInput/correlmaps_byte",
+                    "filename": "readyasinput_correlmap2_byte.tif"
+                }
+            }
+        },
+        "inputDisplacementMaps": {
+            "PX1": {
+                "attributes": {
+                    "basetype": 11,
+                    "fileSize": 72514,
+                    "height": 1000,
+                    "nchannels": 1,
+                    "width": 1000
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_correlScoreWeightPower/readyAsAppInput/dispmap2",
+                    "filename": "readyasinput_dispmap2_float_px1.tif"
+                }
+            },
+            "PX2": {
+                "attributes": {
+                    "basetype": 11,
+                    "fileSize": 72514,
+                    "height": 1000,
+                    "nchannels": 1,
+                    "width": 1000
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_correlScoreWeightPower/readyAsAppInput/dispmap2",
+                    "filename": "readyasinput_dispmap2_float_px2.tif"
+                }
+            },
+            "ZOther": {
+                "attributes": {
+                    "basetype": 11,
+                    "fileSize": 72514,
+                    "height": 1000,
+                    "nchannels": 1,
+                    "width": 1000
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_correlScoreWeightPower/readyAsAppInput/dispmap2",
+                    "filename": "readyasinput_dispmap2_float_dz.tif"
+                }
+            }
+        }
+    },
+    "pixelValueResolution": {
+        "PX1": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        },
+        "PX2": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        },
+        "ZOther": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        }
+    },
+    "route": [
+        {
+            "nbPoints": 6,
+            "points": [
+                [
+                    580,
+                    90
+                ],
+                [
+                    580,
+                    910
+                ],
+                [
+                    230,
+                    910
+                ],
+                [
+                    230,
+                    90
+                ],
+                [
+                    940,
+                    90
+                ],
+                [
+                    940,
+                    910
+                ]
+            ],
+            "routeId": 0,
+            "routeName": "no name"
+        }
+    ],
+    "stackedProfil": [
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": -59,
+                            "xMin": -221
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 355,
+                            "xMin": 182
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 102
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -355
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 355,
+                            "xMin": 110
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 102
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -355
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 355,
+                            "xMin": 110
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 102
+                    }
+                }
+            },
+            "boxId": 0
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -355
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 355,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -355
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 355,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -355
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 355,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 1
+        }
+    ],
+    "stackedProfilBoxes": [
+        {
+            "boxes": [
+                {
+                    "boxId": 0,
+                    "centerPoint": [
+                        580,
+                        253
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 711,
+                    "oddPixelWidth": 327,
+                    "unitVectorDirection": [
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "boxId": 1,
+                    "centerPoint": [
+                        580,
+                        746
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 711,
+                    "oddPixelWidth": 327,
+                    "unitVectorDirection": [
+                        0,
+                        1
+                    ]
+                }
+            ]
+        }
+    ],
+    "versionFormat": "0.8"
+}

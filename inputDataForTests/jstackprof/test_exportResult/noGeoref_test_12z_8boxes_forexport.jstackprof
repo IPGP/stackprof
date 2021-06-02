@@ -1,0 +1,916 @@
+{
+    "_descAbout_routePoint": "Points coordinates are [x, y] in pixel image coordinates. The top-let corner of top-left image pixel is [0.0, 0.0]. idPoint increases by 1 from first point to last point",
+    "_noteAbout_imagesSet_geoRefInfos": "The image path and filename stored in imagesSet_geoRefInfos is not used at loading",
+    "computationMainMode": 1,
+    "computationParameters": {
+        "baseComputationMethod": "mean",
+        "correlationScoreMapParameters": {
+            "PX1_PX2": {
+                "bUse": false,
+                "option_thresholdRejection": {
+                    "bUse": false,
+                    "rejectValueIfBelow": 0
+                },
+                "option_weighting": {
+                    "bUse": false,
+                    "weightExponent": 2
+                }
+            },
+            "ZOther": {
+                "bUse": false,
+                "option_thresholdRejection": {
+                    "bUse": false,
+                    "rejectValueIfBelow": 0
+                },
+                "option_weighting": {
+                    "bUse": false,
+                    "weightExponent": 2
+                }
+            }
+        },
+        "pixelExtractionMethod": "nearestPixel",
+        "profilOrientation": "progressDirectionAlongTraceIsFromFirstToLastPoint"
+    },
+    "contentType": "project",
+    "imagesSet_geoRefInfos": {
+        "coordRefSys_coordTrans": {
+            "EPSG_code": "EPSG:notSet"
+        },
+        "imageGeoRef": {
+            "pathAndFilename": {
+                "absolutePath": "/home/laurent/inputDataForTests/inputImages/Px1Px2ForVariousTests",
+                "filename": "Px2_Num5_DeZoom1_LeChantier.tif"
+            },
+            "worldFileContent": {
+                "0_A_xScale": 1,
+                "1_D_rotationTerms_1": 0,
+                "2_B_rotationTerms_2": 0,
+                "3_E_yScale": 1,
+                "4_C_xTranslationTerm": 0,
+                "5_F_yTranslationTerm": 0
+            }
+        }
+    },
+    "inputFiles": {
+        "inputCorrelationScoreMaps": {
+            "PX1_PX2": {
+                "pathAndFilename": {
+                    "absolutePath": "",
+                    "filename": ""
+                }
+            },
+            "ZOther": {
+                "pathAndFilename": {
+                    "absolutePath": "",
+                    "filename": ""
+                }
+            }
+        },
+        "inputDisplacementMaps": {
+            "PX1": {
+                "attributes": {
+                    "basetype": 5,
+                    "fileSize": 1567121002,
+                    "height": 31000,
+                    "nchannels": 1,
+                    "width": 24673
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/inputDataForTests/inputImages/Px1Px2ForVariousTests",
+                    "filename": "Px1_Num5_DeZoom1_LeChantier.tif"
+                }
+            },
+            "PX2": {
+                "attributes": {
+                    "basetype": 5,
+                    "fileSize": 1567121002,
+                    "height": 31000,
+                    "nchannels": 1,
+                    "width": 24673
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/inputDataForTests/inputImages/Px1Px2ForVariousTests",
+                    "filename": "Px2_Num5_DeZoom1_LeChantier.tif"
+                }
+            },
+            "ZOther": {
+                "attributes": {
+                    "basetype": 5,
+                    "fileSize": 1567121002,
+                    "height": 31000,
+                    "nchannels": 1,
+                    "width": 24673
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/inputDataForTests/inputImages/Px1Px2ForVariousTests",
+                    "filename": "Px2_Num5_DeZoom1_LeChantier.tif"
+                }
+            }
+        }
+    },
+    "pixelValueResolution": {
+        "PX1": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        },
+        "PX2": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        },
+        "ZOther": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        }
+    },
+    "route": [
+        {
+            "nbPoints": 2,
+            "points": [
+                [
+                    6168.25,
+                    23250
+                ],
+                [
+                    18504.75,
+                    7750
+                ]
+            ],
+            "routeId": 0,
+            "routeName": "no name"
+        }
+    ],
+    "stackedProfil": [
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 0
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 1
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 2
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 3
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 4
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 5
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": true
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 6
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarnFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -3
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 3,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 7
+        }
+    ],
+    "stackedProfilBoxes": [
+        {
+            "boxes": [
+                {
+                    "boxId": 0,
+                    "centerPoint": [
+                        7524.417,
+                        21546.066
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "boxId": 1,
+                    "centerPoint": [
+                        8763.561,
+                        19989.162
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "boxId": 2,
+                    "centerPoint": [
+                        9724.454,
+                        18781.864
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "boxId": 3,
+                    "centerPoint": [
+                        11314.195,
+                        16784.459
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "boxId": 4,
+                    "centerPoint": [
+                        13048.625,
+                        14605.262
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "boxId": 5,
+                    "centerPoint": [
+                        14764.504,
+                        12449.373
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "boxId": 6,
+                    "centerPoint": [
+                        16105.671,
+                        10764.285
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "boxId": 7,
+                    "centerPoint": [
+                        18265.161,
+                        8051.028
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 7,
+                    "oddPixelWidth": 5,
+                    "unitVectorDirection": [
+                        0.6227386,
+                        -0.78243
+                    ]
+                }
+            ]
+        }
+    ],
+    "bUseGeoRef": false,
+    "versionFormat": "0.8"
+}

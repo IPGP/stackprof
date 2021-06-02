@@ -1,0 +1,428 @@
+{
+    "_descAbout_routePoint": "Points coordinates are [x, y] in pixel image coordinates. The top-let corner of top-left image pixel is [0.0, 0.0]. idPoint increases by 1 from first point to last point",
+    "_noteAbout_imagesSet_geoRefInfos": "The image path and filename stored in imagesSet_geoRefInfos is not used at loading",
+    "bUseGeoRef": false,
+    "computationMainMode": 1,
+    "computationParameters": {
+        "baseComputationMethod": "mean",
+        "correlationScoreMapParameters": {
+            "PX1_PX2": {
+                "bUse": false,
+                "option_thresholdRejection": {
+                    "bUse": false,
+                    "rejectValueIfBelow": 0
+                },
+                "option_weighting": {
+                    "bUse": false,
+                    "weightExponent": 2
+                }
+            },
+            "ZOther": {
+                "bUse": false,
+                "option_thresholdRejection": {
+                    "bUse": false,
+                    "rejectValueIfBelow": 0
+                },
+                "option_weighting": {
+                    "bUse": false,
+                    "weightExponent": 2
+                }
+            }
+        },
+        "pixelExtractionMethod": "nearestPixel",
+        "profilOrientation": "progressDirectionAlongTraceIsFromFirstToLastPoint"
+    },
+    "contentType": "project",
+    "imagesSet_geoRefInfos": {
+        "coordRefSys_coordTrans": {
+            "EPSG_code": "EPSG:notSet"
+        },
+        "imageGeoRef": {
+            "pathAndFilename": {
+                "absolutePath": "/home/laurent/10fev2021/convertedImages_CanBeUsedInApp/Px1_Px2/square_Nan_2100x2100",
+                "filename": "px1_nan_0p1m1.tiff"
+            },
+            "worldFileContent": {
+                "0_A_xScale": 1,
+                "1_D_rotationTerms_1": 0,
+                "2_B_rotationTerms_2": 0,
+                "3_E_yScale": -1,
+                "4_C_xTranslationTerm": 0,
+                "5_F_yTranslationTerm": 0
+            }
+        }
+    },
+    "inputFiles": {
+        "inputCorrelationScoreMaps": {
+            "PX1_PX2": {
+                "pathAndFilename": {
+                    "absolutePath": "",
+                    "filename": ""
+                }
+            },
+            "ZOther": {
+                "pathAndFilename": {
+                    "absolutePath": "",
+                    "filename": ""
+                }
+            }
+        },
+        "inputDisplacementMaps": {
+            "PX1": {
+                "attributes": {
+                    "basetype": 11,
+                    "fileSize": 17652842,
+                    "height": 2100,
+                    "nchannels": 1,
+                    "width": 2100
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_projection_PerpParall/Px1_Px2/square_withNan_2100x2100",
+                    "filename": "px1_nan_0p1m1.tiff"
+                }
+            },
+            "PX2": {
+                "attributes": {
+                    "basetype": 11,
+                    "fileSize": 17652842,
+                    "height": 2100,
+                    "nchannels": 1,
+                    "width": 2100
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_projection_PerpParall/Px1_Px2/square_withNan_2100x2100",
+                    "filename": "px2_nan_0p1m1.tiff"
+                }
+            },
+            "ZOther": {
+                "attributes": {
+                    "basetype": 11,
+                    "fileSize": 17652842,
+                    "height": 2100,
+                    "nchannels": 1,
+                    "width": 2100
+                },
+                "pathAndFilename": {
+                    "absolutePath": "/home/laurent/github-stackprof_repos/stackprof-bin/inputDataForTests/inputImages/appTest_projection_PerpParall/Px1_Px2/square_withNan_2100x2100",
+                    "filename": "px1_nan_0p1m1.tiff"
+                }
+            }
+        }
+    },
+    "pixelValueResolution": {
+        "PX1": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        },
+        "PX2": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        },
+        "ZOther": {
+            "micmacStep": 1,
+            "spatialResolution": 1
+        }
+    },
+    "route": [
+        {
+            "nbPoints": 2,
+            "points": [
+                [
+                    525,
+                    1575
+                ],
+                [
+                    1575,
+                    525
+                ]
+            ],
+            "routeId": 0,
+            "routeName": "no name"
+        }
+    ],
+    "stackedProfil": [
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": -67,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 84
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": -88,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 94
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 152
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 0
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 239
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": -256,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 1
+        },
+        {
+            "Parall": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 0,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 80
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "Perp": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": -60,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 0
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "ZOther": {
+                "Bookmark": {
+                    "bWarningFlagByUser": false
+                },
+                "XRangesForLinRegr_withX0": {
+                    "XRange_left": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": -86,
+                            "xMin": -480
+                        }
+                    },
+                    "XRange_right": {
+                        "XRange": {
+                            "bValid": true,
+                            "xMax": 480,
+                            "xMin": 62
+                        }
+                    },
+                    "x0ForYOffsetComputation": {
+                        "bValid": true,
+                        "x0": 0
+                    }
+                }
+            },
+            "boxId": 2
+        }
+    ],
+    "stackedProfilBoxes": [
+        {
+            "boxes": [
+                {
+                    "boxId": 0,
+                    "centerPoint": [
+                        573.147,
+                        1526.853
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 961,
+                    "oddPixelWidth": 13,
+                    "unitVectorDirection": [
+                        0.7071068,
+                        -0.7071068
+                    ]
+                },
+                {
+                    "boxId": 1,
+                    "centerPoint": [
+                        1060.74,
+                        1039.26
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 961,
+                    "oddPixelWidth": 13,
+                    "unitVectorDirection": [
+                        0.7071068,
+                        -0.7071068
+                    ]
+                },
+                {
+                    "boxId": 2,
+                    "centerPoint": [
+                        1529.001,
+                        570.999
+                    ],
+                    "idxSegmentOwnerOfCenterPoint": 0,
+                    "oddPixelLength": 961,
+                    "oddPixelWidth": 13,
+                    "unitVectorDirection": [
+                        0.7071068,
+                        -0.7071068
+                    ]
+                }
+            ]
+        }
+    ],
+    "versionFormat": "0.8"
+}

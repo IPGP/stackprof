@@ -1,0 +1,9 @@
+
+- The original images and data comes from:
+  https://download.osgeo.org/geotiff/samples/spot/chicago/
+
+* fakeData/ contains altered georeferenced data for the goal of the unit test.
+
+* Refers to https://download.osgeo.org/geotiff/samples/spot/chicago/
+  for source images with reliable data
+

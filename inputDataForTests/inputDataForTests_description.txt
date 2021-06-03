@@ -1,0 +1,262 @@
+-----------------------------------------------------------------------
+StackProf V1.00
+
+description of inputDataForTests directory
+
+June 3th 2021
+-----------------------------------------------------------------------
+
+1) About sub-directories called 'ImageToConvert' and converted images.
+
+  - Sub-directories called 'ImageToConvert'
+    These sub-directories contains images created with GIMP for example. These images are in RGB byte data type format or byte (gray).
+    Most of them must be converted in a different file format ( for example .tiff with float data type) to be used for the unit tests or stackprof.
+    To convert them, use the tool called 'tool_noQt_imageFormatConverter' 
+    (source code here: https://github.com/micmacIGN/stackprof/tree/main/sourceCode/tests/tools_noQt_createTestImages/tool_noQt_imageFormatConverter )
+ 
+  - Converted images, ready to be used as input file for unit tests and stackprof tests are provided also in this repository.
+    Some of them are large. Hence, provided in the repository in a compressed format (.7z files)
+     
+2) inputDataForTests tree structure
+     
+inputDataForTests
+ |
+ |-- georef     | Image with Worldfile and .jepsg, with different content for the unit test about geo point conversion 'test_Qt_convertGeoPoint'
+ |   |
+ |   `-- fromGeoTIFF
+ |       |-- source_is_osgeo.txt
+ |       `-- chicago
+ |           |-- fakeData
+ |           |   |-- SP27GTIF_fakeDifferentWF.TFW
+ |           |   |-- SP27GTIF_fakeDifferentWF.TIF
+ |           |   |-- SP27GTIF_fakeDifferentWF_TIF.jepsg
+ |           |   |-- SP27GTIF_fakeEPSGDifferent.TFW
+ |           |   |-- SP27GTIF_fakeEPSGDifferent.TIF
+ |           |   `-- SP27GTIF_fakeEPSGDifferent_TIF.jepsg
+ |           |
+ |           |-- README.TXT
+ |           |-- SP27GTIF.HDR
+ |           |-- SP27GTIF.REP
+ |           |-- SP27GTIF_sameWF.TFW
+ |           |-- SP27GTIF_sameWF.TIF
+ |           |-- SP27GTIF_sameWF_TIF.jepsg
+ |           |-- SP27GTIF.TFW
+ |           |-- SP27GTIF.TIF
+ |           |-- SP27GTIF_TIF.jepsg
+ |           |-- SP27GTIF.TIF.lgo
+ |           |-- SP27GTIF.TXT
+ |           |-- UTM2GTIF.HDR
+ |           |-- UTM2GTIF.REP
+ |           |-- UTM2GTIF.TFW
+ |           |-- UTM2GTIF.TIF
+ |           |-- UTM2GTIF_TIF.jepsg
+ |           |-- UTM2GTIF.TIF.lgo
+ |           `-- UTM2GTIF.TXT
+ |
+ |-- inputImages
+ |   |
+ |   |-- appTest_100kImageSize     | Image with 100K pixels for width, or height. To check that stackprof handles correctly image like that.
+ |   |   |                         | ( 100Kx100K image is not provided here )
+ |   |   |                         | ( Qt 5.12 scrollbars have a technical limitation to 100K )
+ |   |   |-- 100kX3839.tif.7z
+ |   |   `-- 3839x100k.tif.7z
+ |   |
+ |   |-- appTest_correlScoreWeightPower     | Images to test, in stackprof, profiles result using: 
+ |   |   |                                  | correlation score map, filter and exponent features
+ |   |   |                                  | (*) Most relevant test uses dispmap2.tif with correlmap2.tif
+ |   |   |
+ |   |   |-- ImageToConvert
+ |   |   |   |-- correlmap0_grayByte.png
+ |   |   |   |-- correlmap0_rgb.png
+ |   |   |   |-- correlmap1_rgb.png
+ |   |   |   |-- correlmap2_rgb.png (*)
+ |   |   |   |-- dispmap1_rgb.png
+ |   |   |   `-- dispmap2_rgb.png (*)   
+ |   |   |
+ |   |   `-- readyAsAppInput
+ |   |       |-- correlmaps_byte.7z
+ |   |       |-- dispmap1.7z
+ |   |       `-- dispmap2.7z
+ |   | 
+ |   |-- appTest_projection_PerpParall     | Images with plain -1, 0, +1 and NaN areas for 'test_Qt_point_relocation_and_projection'.
+ |   |   |                                 | Permits to test projection with simple values and horizontal, vertical, 45° degree oriented boxes for example.
+ |   |   `-- Px1_Px2
+ |   |       |-- square_900x900
+ |   |       |   |-- correlscore_0_127_255.tif.7z
+ |   |       |   |-- float_px1_vlines_n0_p1_m1.tfw
+ |   |       |   |-- float_px1_vlines_n0_p1_m1.tiff.7z
+ |   |       |   |-- float_px1_vlines_n0_p1_m1_tiff.jepsg
+ |   |       |   |-- float_px2_hlines_n0_p1_m1.tfw
+ |   |       |   |-- float_px2_hlines_n0_p1_m1.tiff.7z
+ |   |       |   |-- float_px2_vlines_n0_p1_m1_tiff.jepsg
+ |   |       |   `-- ImageToConvert
+ |   |       |       |-- px1_vlines_n0_p1_m1.png
+ |   |       |       `-- px2_hlines_n0_p1_m1.png
+ |   |       |
+ |   |       `-- square_withNan_2100x2100
+ |   |           |-- ImageToConvert
+ |   |           |   |-- biggerImage_correlscore_0_127_255.png
+ |   |           |   |-- px1_nan_0p1m1.png
+ |   |           |   `-- px2_nan_0p1m1.png
+ |   |           |-- in_bigImage_correlscore_0_127_255.tif.7z
+ |   |           |-- px1_nan_0p1m1.tfw
+ |   |           |-- px1_nan_0p1m1.tiff.7z
+ |   |           |-- px1_nan_0p1m1_tiff.jepsg
+ |   |           |-- px2_nan_0p1m1.tfw
+ |   |           |-- px2_nan_0p1m1.tiff.7z
+ |   |           `-- px2_nan_0p1m1_tiff.jepsg
+ |   |
+ |   |-- appTest_zoomLoadingInThread     | Three large images to check how the image tiles loading in thread works with the zoom feature of stackprof
+ |   |   `-- 20K30K_PX1_PX2_deltaZ
+ |   |       |-- float_1.tfw
+ |   |       |-- float_1.tif.7z
+ |   |       |-- float_1_tif.jepsg
+ |   |       |-- float_2.tif.7z
+ |   |       |-- float_z.tif.7z
+ |   |       `-- ImageToConvert
+ |   |           |-- 1.png
+ |   |           |-- 2.png
+ |   |           `-- z.png
+ |   | 
+ |   |-- test_pyramidImageBuild_imageWithNan        | Images with Nan for 'test_Qt_ZLIImageBuilder_NaNValueHandled'
+ |   |   | 
+ |   |   |-- float_withNanAtImageBottomOnly_10Kx10K.tif.7z
+ |   |   |-- test_nan5_15Kx15K.tif.7z
+ |   |   `-- ImageToConvert
+ |   |       |-- test_rgbmagenta5_15Kx15K.tif.7z
+ |   |       `-- withNanAtImagebottomOnly_10Kx10K.png
+ |   | 
+ |   |-- test_various_Px1Px2_withCorrelScoreMap     | Real content images for Px1 Px2 and correlation score map
+ |   |   |                                          | Used, for now, to test that changing profile orientation on already computed boxes on the other orientation, 
+ |   |   |                                          | gives the same export results that computing a similar project with the same orientation but just loaded.
+ |   |   |
+ |   |   `-- landsat_subset 
+ |   |       |-- Correl_LeChantier_Num_5_sub.tfw
+ |   |       |-- Correl_LeChantier_Num_5_sub_.7z
+ |   |       |-- Px1_Num6_DeZoom1_LeChantier_sub.7z
+ |   |       |-- Px1_Num6_DeZoom1_LeChantier_sub.tfw
+ |   |       |-- Px1_Num6_DeZoom1_LeChantier_sub_tif.jepsg
+ |   |       |-- Px2_Num6_DeZoom1_LeChantier_sub.7z
+ |   |       |-- Px2_Num6_DeZoom1_LeChantier_sub.tfw
+ |   |       `-- Px2_Num6_DeZoom1_LeChantier_sub_tif.jepsg
+ |   | 
+ |   `-- unitTest_pixelPicker                   | Small images for 'test_Qt_pixelPicker'
+ |       |
+ |       |-- signed16_float_byte_15x15          | Generated by tool_noQt_generateTestImages
+ |       |   |                                  | (source code of tool_noQt_generateTestImages here:
+ |       |   |                                  | https://github.com/micmacIGN/stackprof/tree/main/sourceCode/tests/tools_noQt_createTestImages/tool_noQt_generateTestImages )
+ |       |   |-- byte_correlScore_dz_wr.tiff
+ |       |   |-- byte_correlScore_wr.tfw
+ |       |   |-- byte_correlScore_wr.tiff
+ |       |   |-- byte_correlScore_wr_tiff.jepsg
+ |       |   |-- float_dz_wr.tiff
+ |       |   |-- float_px1_wr.tfw
+ |       |   |-- float_px1_wr.tiff
+ |       |   |-- float_px2_wr.tfw
+ |       |   |-- float_px2_wr.tiff
+ |       |   |-- float_px2_wr_tiff.jepsg
+ |       |   |-- s16_px1_wr.tfw
+ |       |   |-- s16_px1_wr.tiff
+ |       |   |-- s16_px1_wr_tiff.jepsg
+ |       |   |-- s16_px2_wr.tfw
+ |       |   `-- s16_px2_wr.tiff
+ |       |
+ |       `-- unsigned16     | Additionnal image for unsigned 16 bits test
+ |           |
+ |           |-- LC81540422013269LGN00_B8_sub3.tif.7z
+ |           `-- aboutImage.txt
+ | 
+ |-- jstackprof  | .jstackprof files used in tests and unit tests.      
+ |   |           | Path for input files in .jstackprof would need to be adjusted to match your environnement
+ |   |
+ |   |-- test_exportResult   | For 'test_Qt_exportResults' 
+ |   |   |                   | Path for input files in .jstackprof would need to be adjusted to match your environnement
+ |   |   |
+ |   |   |-- georef_test_12z_8boxes_forexport.jstackprof
+ |   |   |-- noGeoref_test_12z_8boxes_forexport.jstackprof
+ |   |   `-- projects_test_exportResult.7z
+ |   | 
+ |   |-- test_correlscoremap_weighting_filter_power   | Use images from 'inputImages/appTest_correlScoreWeightPower'
+ |   |   |-- project.jstackprof 
+ |   |   `-- result
+ |   |       `-- result.7z
+ |   |  
+ |   |-- test_onRealPx1Px2Correl_andReverseOrient   | Test that changing profile orientation on already computed boxes on the other orientation, 
+ |   |   |                                          | gives the same export results that computing a similar project with the same orientation.
+ |   |   |                                          | Use images from 'inputImages/test_various_Px1Px2_withCorrelScoreMap/landsat_subset'
+ |   |   |
+ |   |   |-- project.7z
+ |   |   `-- result_allBoxes_withCurves_noEmptyData
+ |   |       `-- result_allBoxes_withCurves_noEmptyData.7z
+ |   | 
+ |   `-- test_projection   | use images from 'inputImages/appTest_correlScoreWeightPowerappTest_projection_PerpParall' 
+ |       |  
+ |       |-- manyboxes_horiVertiTrace_00_m1m1_p1p1_withNaN
+ |       |   |-- project.7z
+ |       |   `-- results
+ |       |       `-- results.7z
+ |       | 
+ |       |-- manyboxes_pixelFactors_horiVertiTrace_0m1p1_withNan
+ |       |   |-- project_files.7z
+ |       |   `-- result
+ |       |       `-- result.7z
+ |       |  
+ |       |-- threeBoxes_45degree_00_p1p1_m1m1
+ |       |   |-- results
+ |       |   |   `-- results.7z
+ |       |   `-- threeBoxes_45degree_00_p1p1_m1m1.jstackprof
+ |       |
+ |       `-- threeBoxes_NaN_inProfilepart
+ |           |-- project.jstackprof
+ |           `-- results
+ |               `-- results.7z
+ | 
+ `-- testData_WordFile_EPSG_syncTest   | Image with Worldfile with different content for 'test_Qt_sync_TFW'
+     |
+     `-- worldfile
+         |-- allsync_and_usable
+         |   |-- EPSG_32633
+         |   |-- s16_15x15_deltaZ.tfw
+         |   |-- s16_15x15_deltaZ.tiff
+         |   |-- s16_15x15_px1.tfw
+         |   |-- s16_15x15_px1.tiff
+         |   |-- s16_15x15_px2.tfw
+         |   `-- s16_15x15_px2.tiff
+         |-- allsync_but_unusable_rotationTermNotZero
+         |   |-- EPSG_32633
+         |   |-- s16_15x15_deltaZ.tfw
+         |   |-- s16_15x15_deltaZ.tiff
+         |   |-- s16_15x15_px1.tfw
+         |   |-- s16_15x15_px1.tiff
+         |   |-- s16_15x15_px2.tfw
+         |   `-- s16_15x15_px2.tiff
+         |-- allsync_but_unusable_xyscalenotAbsEqu
+         |   |-- EPSG_32633
+         |   |-- s16_15x15_deltaZ.tfw
+         |   |-- s16_15x15_deltaZ.tiff
+         |   |-- s16_15x15_px1.tfw
+         |   |-- s16_15x15_px1.tiff
+         |   |-- s16_15x15_px2.tfw
+         |   `-- s16_15x15_px2.tiff
+         |-- unsync_one_unusable_rotationTermNotZero
+         |   |-- EPSG_32633
+         |   |-- s16_15x15_deltaZ.tfw
+         |   |-- s16_15x15_deltaZ.tiff
+         |   |-- s16_15x15_px1.tfw
+         |   |-- s16_15x15_px1.tiff
+         |   |-- s16_15x15_px2.tfw
+         |   `-- s16_15x15_px2.tiff
+         `-- unsync_one_unusable_xyscalenotAbsEqu
+               |-- EPSG_32633
+               |-- s16_15x15_deltaZ.tfw
+               |-- s16_15x15_deltaZ.tiff
+               |-- s16_15x15_px1.tfw
+               |-- s16_15x15_px1.tiff
+               |-- s16_15x15_px2.tfw
+               `-- s16_15x15_px2.tiff
+
+[ end of document ]
+
+
+
+

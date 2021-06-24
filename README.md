@@ -1,12 +1,10 @@
-Stackprof binaries repository
+StackProf binaries repository
 =============================
 
-This repository contains binaries about stackprof:
-- Stackprof application binaries for  linux and macOS target
-- User guide (French)
-- Application's files format description (English): traces, project  and measures export 
-- Input data and images for stackprof tests and unit tests
+This repository contains:
+- StackProf application binaries for Linux and macOS targets
+- User guide (in French and soon in English)
+- Application file format description (in English): trace, project and measurement export 
+- Input data and images for StackProf tests and unit tests
 
-This repository does not contain the source code of StackProf.
-The source code is located here: https://github.com/micmacIGN/stackprof
-
+This repository does not contain StackProf source code, which is located here: https://github.com/micmacIGN/stackprof

@@ -1,7 +1,7 @@
 StackProf binaries repository
 =============================
 
-StackProf is a software developed at IPGP by Laurent Pourchet, which allows to perform measurements in images from stacked profiles. It was developed with the aim of measuring the displacements at the surface induced by earthquakes along faults, but the scope of its applications may be wider.
+StackProf is a software developed at IPGP, which allows to perform measurements in images from stacked profiles. It was developed with the aim of measuring the displacements at the surface induced by earthquakes along faults, but the scope of its applications may be wider.
 
 The development was funded by [IPGP](http://www.ipgp.fr/en) and [CNES](https://cnes.fr/en/) and carried out in collaboration with [IGN](https://ign.fr/).
 

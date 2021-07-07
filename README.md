@@ -7,7 +7,7 @@ The development was funded by [IPGP](http://www.ipgp.fr/en) and [CNES](https://c
 
 This repository contains:
 - StackProf application binaries for Linux and macOS targets
-- User guide (in French; English version is on the todo list)
+- User guide (in French and in English from V1.02)
 - Application file format description (in English): trace, project and measurement export 
 - Input data and images for StackProf tests and unit tests
 
